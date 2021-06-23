@@ -20,13 +20,13 @@
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define( 'DB_NAME', 'cp442560_fashion' );
+define( 'DB_NAME', 'srfashionbusinessschool' );
 
 /** Username của database */
-define( 'DB_USER', 'cp442560_fashion' );
+define( 'DB_USER', 'root' );
 
 /** Mật khẩu của database */
-define( 'DB_PASSWORD', '~}p&kvsAT%Ne' );
+define( 'DB_PASSWORD', '' );
 
 /** Hostname của database */
 define( 'DB_HOST', 'localhost' );
