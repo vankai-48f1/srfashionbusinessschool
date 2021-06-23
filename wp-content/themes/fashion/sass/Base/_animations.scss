@@ -1,0 +1,26 @@
+// chứa các keyframes tạo hiệu ứng animations
+@keyframes visibility-text {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes scale-img {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.elmt-anm.animate__animated.animate__fadeInUp {
+  --animate-duration: 1.5s;
+}
+.animate__animated.animate__fadeIn {
+  animation-fill-mode: forwards;
+}

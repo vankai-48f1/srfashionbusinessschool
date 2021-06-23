@@ -1,0 +1,55 @@
+.discover {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-variant: normal;
+  @include style-font-bl;
+  background-color: $white;
+  @include trans-hover;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $black-light;
+  }
+  &__icon {
+    padding-left: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 1px $black;
+  }
+}
+.box-circle {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: $color-bg-icon;
+  &__icon {
+    padding-left: 0;
+  }
+}
+.box-read {
+  margin-left: 4rem;
+  font-size: 1.2rem;
+  @include style-font-bl;
+  padding: 8px;
+  background-color: $color-bg-icon;
+  &__arrow-read {
+    padding-left: 0;
+    font-size: 1.2rem;
+  }
+}
+.box-enrol {
+  font-size: 1.2rem;
+  @include style-font-w;
+  padding: 8px;
+  background-color: $red-light;
+  display: inline-block;
+  &__line-left {
+    margin-left: 5px;
+  }
+}

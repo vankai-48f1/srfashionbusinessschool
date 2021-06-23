@@ -1,0 +1,65 @@
+.section-first {
+  position: relative;
+  // z-index: -1;
+  .slider-primary {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 2rem !important;
+    &__image {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 8rem;
+      @include respond(tab-port) {
+        text-align: left;
+        left: 8%;
+        bottom: 4rem;
+      }
+      li {
+        button {
+          &::before {
+            font-size: 6.5px;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &__arrow-down {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 10rem;
+    color: $white;
+    @include trans-hover;
+    @include respond(tab-port) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 3rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+    svg {
+      height: 3rem;
+      width: auto;
+      fill: $white !important;
+      @include trans-hover;
+    }
+    .click-down {
+      color: $white;
+    }
+  }
+}

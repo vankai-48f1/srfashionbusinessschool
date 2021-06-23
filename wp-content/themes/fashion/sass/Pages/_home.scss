@@ -1,0 +1,27 @@
+.set-w {
+  width: 100%;
+  padding-left: 225px;
+  @include respond(tab-land) {
+    padding-left: 0;
+  }
+  @include respond(tab-port) {
+    padding-left: 0;
+  }
+  @include respond(phone) {
+    padding-left: 0;
+  }
+  @include respond(small-phone) {
+    padding-left: 0;
+  }
+}
+.bg-news-event {
+  background-color: $black-light-second;
+}
+.bg-stories {
+  background-color: transparent;
+}
+.pd-mb-top {
+  @include respond(tab-land) {
+    padding-top: 75px;
+  }
+}

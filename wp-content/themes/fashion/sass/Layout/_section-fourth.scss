@@ -1,0 +1,118 @@
+.news-event {
+  padding: 8rem 0 10rem;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    @include style-font-w;
+    font-size: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+  &__views {
+    color: $white;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-align: right;
+    display: inline-block;
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  &__div-news-event {
+    margin: 3rem 0;
+  }
+  &__sld-item {
+    display: flex !important;
+    flex-direction: column;
+    height: inherit;
+  }
+  &__content-col {
+    display: block;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__clip-hover {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: fit-content !important;
+  }
+  &__img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  &__ss-text {
+    padding: 1rem 2.5rem;
+  }
+  &__date {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $color-gray;
+    margin-bottom: 3rem;
+  }
+  &__name-item {
+    color: $white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: block;
+    width: 90%;
+    line-height: 1.1;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__read-more {
+    color: $color-gray !important;
+    @include style-font-w;
+    font-size: 1.2rem;
+    margin-top: auto;
+    padding: 1rem 2.5rem;
+    display: block;
+    @include trans-hover;
+    &:hover {
+      color: $white !important;
+      text-decoration: none;
+    }
+  }
+  .slider-news-event {
+    .slick-dots {
+      @include respond(phone) {
+        position: relative;
+        margin-top: 3rem;
+      }
+      li {
+        button {
+          &::before {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+  }
+  .slick-slide {
+    height: auto;
+    div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .slick-slide:not(:last-child) {
+    margin-right: 28px;
+  }
+  .slick-slide:nth-last-child() {
+    width: 100%;
+    margin-left: auto;
+  }
+}

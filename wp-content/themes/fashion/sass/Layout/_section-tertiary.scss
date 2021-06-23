@@ -1,0 +1,245 @@
+.section-tertiary {
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  @include respond(tab-land) {
+    margin-bottom: 0;
+  }
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+  }
+  &__col-col-4 {
+    width: calc((100% / 3) - 25px);
+    max-width: calc((100% / 3) - 25px);
+    @include respond(tab-port) {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+  &__col-col-4:nth-child(2) {
+    margin-top: 3rem;
+  }
+  &__col-col-4:nth-child(3) {
+    margin-top: 1rem;
+  }
+  &__content-ttr {
+    margin: 0 30px;
+    padding: 15px 0;
+    background-color: $white;
+    position: relative;
+    z-index: 99;
+  }
+  &__image {
+    position: relative;
+    bottom: -60px;
+    z-index: 9;
+  }
+  &__item-img {
+    width: 100%;
+  }
+
+  &__menu-fashion > .menu-item > a {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    padding: 0 20px;
+    display: block;
+    transition: all 0.3s ease;
+    span {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      display: block;
+    }
+    &:hover {
+      color: $color-hover;
+    }
+  }
+  &__menu-fashion {
+    .menu-item {
+      .sub-menu {
+        li {
+          a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem 1rem 2rem;
+            display: block;
+            color: $black-light;
+            @include trans-hover;
+            position: relative;
+            &:hover {
+              color: $white;
+              background-color: $black-light;
+            }
+            &::after {
+              font-family: "Font Awesome 5 Free";
+              content: "\f105";
+              display: inline-block;
+              padding-right: 3px;
+              vertical-align: middle;
+              font-weight: 900;
+              font-size: 17px;
+              position: absolute;
+              right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__text-top {
+    display: block;
+    color: $black-light;
+    @include trans-hover;
+    &:hover {
+      color: $color-hover;
+    }
+  }
+  &__title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    padding: 0 20px;
+    display: block;
+  }
+  &__short-descript {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: block;
+  }
+  &__list-ttr {
+    margin-bottom: 3rem;
+  }
+  &__link-ttr {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    display: block;
+    color: $black-light;
+    @include trans-hover;
+    &:hover {
+      color: $white;
+      background-color: $black-light;
+    }
+    &--arrow-ttr {
+      font-size: 1.3rem;
+      float: right;
+      padding-left: 0;
+    }
+  }
+  &__list-school {
+    margin-top: 2rem;
+    display: block;
+    padding: 0 2rem;
+  }
+  &__name-school {
+    display: inline;
+  }
+  &__link-school {
+    display: inline-block;
+    font-size: 1.1rem;
+    @include style-font-bl;
+    @include trans-hover;
+    line-height: 2rem;
+    &:hover {
+      color: $color-gray;
+    }
+  }
+  &__name-school:not(:last-child) {
+    &::after {
+      content: "/";
+      padding: 0 0.3rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.infor-office {
+  &__row-first {
+    display: block;
+    text-align: center;
+    background-color: $black;
+    height: 100%;
+  }
+  &__name-1 {
+    padding: 3.5rem 3rem;
+    display: inline-block;
+    font-size: 1.3rem;
+    @include style-font-w;
+    @include trans-hover;
+    &:hover {
+      color: $black-light;
+      background-color: $white;
+    }
+    &--arrow {
+      vertical-align: 1px;
+      padding-left: 2rem;
+    }
+
+    @include respond(phone) {
+      display: block;
+      &:first-child {
+        border-bottom: 1px solid $color-gray;
+      }
+    }
+  }
+  &__office-bottom {
+    background-color: $white;
+  }
+  &__box-infor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 3rem;
+    width: 100%;
+  }
+  &__name {
+    width: 20%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $black-light;
+    margin: 7px 0;
+    @include respond(tab-port) {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__list-name {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 7px 0;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+  &__name-item {
+    margin-bottom: 1rem;
+  }
+  &__name-item:last-child &__link-infor::after {
+    content: "";
+  }
+  &__link-infor {
+    font-size: 1.2rem;
+    @include style-font-bl;
+    padding: 0 8px;
+    position: relative;
+    padding-right: 3rem;
+    &:hover {
+      color: $black-light;
+      text-decoration: underline;
+    }
+    &::after {
+      content: "●";
+      position: absolute;
+      top: 50%;
+      right: 14px;
+      -webkit-transform: translate(50%, -50%);
+      transform: translate(50%, -50%);
+      font-size: 0.7em;
+    }
+  }
+}

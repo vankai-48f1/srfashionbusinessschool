@@ -1,0 +1,157 @@
+.about-us {
+  &__title {
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+    @include style-font-bl;
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+    }
+  }
+  &__slider {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    .slick-dots {
+      li {
+        button::before {
+          color: $black;
+          font-size: 8px;
+        }
+        button:hover::before {
+          color: $black;
+          opacity: 0.25 !important;
+        }
+      }
+      li.slick-active {
+        button::before {
+          color: $black;
+        }
+        button:hover::before {
+          color: $black !important;
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+  &__item-slider {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__title-ct {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: $black-light-second;
+    padding: 3rem 0 2rem;
+  }
+  &__content {
+    padding-bottom: 3rem;
+    h3,
+    h4 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: $black-light-second;
+      padding: 3rem 0 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+      color: $black-light-second;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      strong {
+        font-weight: 700;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__paragraph {
+    p {
+      font-size: 1.5rem;
+      color: $black-light-second;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
+.discover-ct {
+  background-color: $white;
+  &__discover {
+    padding: 5rem 0;
+    display: block;
+    text-align: center;
+  }
+  &__title-dcv {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  &__dcv-link {
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem 0;
+    color: $black-light-second;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $hover;
+      color: $black-light-second;
+    }
+  }
+}
+.stiky-ss {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: $black-light;
+  border-bottom: 1px solid $bg-body;
+  transition: all 0.3s ease;
+}
+.remove-fixed {
+  position: absolute !important;
+  transition: all 0.3s ease;
+  bottom: 100%;
+  left: 0;
+}
+// #sticky-bar {
+//   position: relative;
+//   top: 0;
+//   left: 0;
+// }
+.sticky-bar {
+  display: flex;
+  &__column-4 {
+    width: calc(100% / 3);
+    border-top: 2px solid $black-light;
+    border-bottom: 2px solid $black-light;
+    border-right: 1px solid $bg-body;
+  }
+  &__column-4:first-child &__link-item {
+    background-color: $red-light;
+    &:hover {
+      color: $black-light-second;
+      background-color: $white;
+    }
+  }
+  &__link-item {
+    display: block;
+    text-align: center;
+    @include style-font-w;
+    font-size: 1.2rem;
+    padding: 2.3rem 0;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $black-light-second;
+      background-color: $white;
+    }
+  }
+}

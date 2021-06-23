@@ -1,0 +1,16 @@
+{
+  "name": "fashion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sasstocss": "node-sass sass/Pages/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "sticky-js": "^1.3.0"
+  }
+}

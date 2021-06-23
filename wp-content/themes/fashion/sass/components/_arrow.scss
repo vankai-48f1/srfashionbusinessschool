@@ -1,0 +1,32 @@
+.arrow-down {
+  text-shadow: 0px 0px 0px $black;
+}
+.goto-top {
+  padding: 1.5rem 0;
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+  }
+  .box-arrowicon {
+    display: block;
+    text-align: right;
+    .icon-arrowtop {
+      width: 5rem;
+      height: 5rem;
+      font-size: 2rem;
+      color: $white;
+      border-radius: 50%;
+      background-color: $black-light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      @include respond(phone) {
+        margin-right: auto;
+      }
+    }
+  }
+}
+#scroll-top {
+  transition: all 0.5s ease !important;
+}

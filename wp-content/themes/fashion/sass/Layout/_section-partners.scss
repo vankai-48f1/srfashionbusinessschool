@@ -1,0 +1,47 @@
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  border-top: 1px solid $color-gray;
+  border-bottom: 1px solid $color-gray;
+  &__name {
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 10%;
+    margin: auto 0;
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+    @include respond(tab-port) {
+      width: 100%;
+      font-size: 2.5rem;
+      padding-left: 0;
+    }
+  }
+  &__list {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: inline-block;
+    margin: 0 auto;
+    img {
+      object-fit: contain;
+      object-position: center;
+      height: 70px;
+      width: auto;
+    }
+  }
+  &__item-img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    height: 70px;
+  }
+}
+.partners-2 {
+  border-top: none;
+  margin-bottom: 8rem;
+}
