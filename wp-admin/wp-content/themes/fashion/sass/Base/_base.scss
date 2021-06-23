@@ -1,0 +1,69 @@
+// file base chứa các khởi tạo ban đầu của các element như *, html, body
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 62.5%;
+  }
+  @include respond(tab-port) {
+    font-size: 62.5%;
+  }
+  @include respond(phone) {
+    font-size: 55%;
+  }
+  @include respond(small-phone) {
+    font-size: 48%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+body {
+  box-sizing: border-box;
+  font-family: Helvetica, Helvetica\Neue, Arial, sans-serif !important;
+}
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 1080px !important;
+    margin: 0 auto;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+  .pd-0 {
+    padding: 0 !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 946px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+a {
+  color: $black;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+.section-animate {
+  position: absolute;
+  top: 50%;
+  height: inherit;
+  width: 100%;
+}
+.over-hiden-animate {
+  overflow: hidden;
+}

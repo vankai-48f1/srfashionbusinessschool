@@ -1,0 +1,269 @@
+.fs-courses-part-1 {
+  &__short-text {
+    font-size: 1.7rem;
+    color: $black-light-second;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+  }
+  &__from {
+    margin-bottom: 5rem;
+  }
+  &__list-link-from {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item-link-from {
+    display: inline-block;
+    position: relative;
+    margin-right: 2rem;
+  }
+  &__item-link-from:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $black-light-second;
+    bottom: 0;
+    left: 0;
+  }
+  &__link-from {
+    @include style-font-bl;
+    font-size: 1.1rem;
+    display: inline-block;
+    line-height: 1.3;
+    &:hover {
+      color: $black-light-second;
+    }
+  }
+  &__img-wrap {
+    position: relative;
+    margin-bottom: 11rem;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__float-box-text {
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    max-width: 300px;
+    min-height: calc(50% + 56px);
+    background-color: $black-light-second;
+    padding: 2rem;
+    display: flex;
+  }
+  &__text-float {
+    font-size: 2.3rem;
+    @include style-font-w;
+    display: inline-block;
+    margin: auto;
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.fs-courses-ct {
+  border-top: 1px solid $black-light-second;
+  &__paragraph {
+    margin-bottom: 4rem;
+  }
+  &__list {
+    // margin-bottom: 5rem;
+  }
+  &__item {
+    display: block;
+    overflow: hidden;
+    &--reuse {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__link-courses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 7px 0;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 102%;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+    }
+    &--reset-width {
+      width: 88%;
+      margin-right: 5px;
+    }
+  }
+
+  &__link-courses:hover::after {
+    background-color: $white;
+  }
+  &__link-courses:hover &__list-name {
+    color: $black-light-second;
+  }
+  &__link-courses:hover &__arrow-left {
+    background-color: $black-light-second;
+    color: $white;
+  }
+  &__link-courses:hover &__read-more {
+    background-color: $black-light-second;
+    color: $white;
+  }
+  &__read-more {
+    transition: all 0.3s ease;
+  }
+  &__left-ct {
+    p {
+      font-size: 1.4rem;
+      @include style-font-bl;
+    }
+  }
+  &__right-ct {
+    display: flex;
+    align-items: center;
+  }
+  &__list-name {
+    transition: all 0.3s ease;
+    li {
+      position: relative;
+      display: inline-block;
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+    li + li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__link-cart {
+    display: inline-block;
+    width: auto;
+    border-left: 2px solid $bd-line;
+    text-align: right;
+  }
+
+  &__link-cart:hover &__line-left {
+    background-color: $black-light-second;
+  }
+
+  &__line-left {
+    margin-left: 5px;
+    transition: all 0.2s ease;
+  }
+
+  &__arrow-left {
+    transition: all 0.3s ease;
+  }
+  &__text-small {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+}
+.padding-bottom {
+  padding-bottom: 3.5rem;
+}
+
+// page course
+.page-course {
+  margin-bottom: 8rem;
+  &__content {
+    padding-top: 5rem;
+  }
+  &__courses-list {
+    margin-bottom: 5rem;
+    a {
+      display: block;
+      &:hover {
+        color: $black-light;
+      }
+    }
+    h2 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+  }
+  &__courses-list:nth-child(odd) {
+    padding-right: 3rem;
+    @include respond(phone) {
+      padding-right: 15px;
+    }
+  }
+  &__courses-list:nth-child(even) {
+    padding-left: 3rem;
+    @include respond(phone) {
+      padding-left: 15px;
+    }
+  }
+  &__courses-class {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $bd-line;
+    overflow: hidden;
+  }
+  &__img-post-course {
+    position: relative;
+    img {
+      width: 100%;
+      height: 40rem;
+      object-fit: cover;
+      object-position: top;
+      @include respond(tab-port) {
+        height: 30rem;
+      }
+    }
+  }
+  &__short-text {
+    font-size: 1.5rem;
+    color: $black-light-second;
+    line-height: 1.5;
+    margin: 2rem 0;
+  }
+  &__course-price {
+    display: block;
+    position: absolute;
+    top: 80%;
+    right: 3rem;
+    a {
+      font-size: 15px;
+      font-weight: 700;
+      padding: 8px 3rem;
+      color: $white;
+      background-color: $black-light;
+      display: inline-block;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $black-light;
+        background-color: $color-gray;
+        cursor: pointer;
+      }
+    }
+  }
+  &__read-more {
+    margin-top: auto;
+  }
+  &__link-read-more {
+    text-align: right;
+    &:hover {
+      color: $black-light !important;
+    }
+  }
+}

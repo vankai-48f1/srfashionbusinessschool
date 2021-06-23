@@ -1,0 +1,37 @@
+.breadcrumb-fs {
+  #breadcrumbs.list-breadcrumb {
+    display: flex;
+    padding-top: 6rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    @include respond(phone) {
+      padding-top: 3rem;
+    }
+    a {
+      font-size: 1.1rem;
+      color: $black-light-second;
+      text-transform: uppercase;
+      &:hover {
+        font-weight: 700;
+        color: $black-light-second;
+      }
+    }
+    li {
+      font-size: 1.1rem;
+      color: $black-light-second;
+      text-transform: uppercase;
+      padding: 0 3px;
+      a {
+        &:hover {
+          font-weight: 700;
+          color: $black-light-second;
+        }
+      }
+    }
+    // li + li::before {
+    //   content: "/";
+    //   color: $black-light-second;
+    //   padding: 0 0.3rem;
+    // }
+  }
+}

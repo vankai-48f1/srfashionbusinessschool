@@ -1,0 +1,55 @@
+.full-banner {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__content {
+    padding-bottom: 55%;
+    position: relative;
+    @include respond(phone) {
+      padding-bottom: 0;
+      padding: 5.5rem 0;
+    }
+  }
+  &__ct-inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 2.5rem;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      position: relative;
+      top: 0%;
+      transform: translateY(0%);
+      padding: 0;
+    }
+  }
+  &__paragraph {
+    font-size: 1.7rem;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 4rem;
+    width: 90%;
+    max-width: 400px;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  &__link-1,
+  &__link-2 {
+    display: inline-block;
+    @include respond(phone) {
+      display: block;
+    }
+  }
+  &__dcv-more {
+    margin-right: 2px;
+    margin-bottom: 5px;
+  }
+}

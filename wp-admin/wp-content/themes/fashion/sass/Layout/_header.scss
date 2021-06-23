@@ -1,0 +1,415 @@
+.header {
+  position: relative;
+
+  @include respond(tab-land) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: $black-light;
+    z-index: 100;
+    transition: opacity 0.333s ease-in;
+  }
+  @include respond(tab-port) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: $black-light;
+    z-index: 100;
+    transition: opacity 0.333s ease-in;
+  }
+  .logo {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    z-index: 100;
+    @include respond(tab-land) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+  }
+  .logo-top {
+    display: block;
+    img {
+      object-fit: contain;
+      object-position: center;
+      height: 9rem;
+      @include respond(tab-land) {
+        width: 6rem;
+        height: auto;
+      }
+      @include respond(tab-port) {
+        width: 6rem;
+        height: auto;
+      }
+    }
+  }
+}
+
+.nav {
+  z-index: 9999;
+  // background-color: $black-light;
+  position: fixed;
+  height: 100vh;
+  width: fit-content;
+  transition: all 0.3s ease;
+  @include respond(tab-land) {
+    pointer-events: none;
+  }
+  @include respond(phone) {
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 45, 46, 0.7);
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.666s cubic-bezier(0, 0, 0.3, 1);
+  }
+  &__white {
+    position: fixed;
+    height: 100%;
+    width: 225px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    transition: all 0.3s ease 0.1s;
+    visibility: hidden;
+    z-index: -1;
+    @include respond(tab-land) {
+      display: none;
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  &__div-logo {
+    @include respond(tab-land) {
+      height: 75px;
+      position: relative;
+      z-index: 9999999;
+    }
+  }
+  &__logo-menu {
+    display: block;
+    height: 15rem;
+    width: inherit;
+    padding: 1.5rem 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+    @include respond(tab-land) {
+      height: 75px;
+      margin-top: 0;
+    }
+    @include respond(tab-port) {
+      height: 75px;
+      margin-top: 0;
+    }
+  }
+  &__close-navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.5rem;
+    color: $white;
+    padding: 2rem 3rem 0 2rem;
+    cursor: pointer;
+    @include respond(tab-land) {
+      display: block;
+      text-align: right;
+    }
+    @include respond(tab-port) {
+      display: block;
+      text-align: right;
+    }
+  }
+  &__list {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 225px;
+    display: block;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in;
+    background-color: $black-light;
+    z-index: 99999999;
+
+    @include respond(tab-land) {
+      width: 320px;
+      overflow-y: auto;
+    }
+    @include respond(tab-port) {
+      width: 320px;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+  &__item {
+    padding: 0.5rem 0;
+    overflow: hidden;
+  }
+  &__btn-label {
+    position: relative;
+    display: block;
+    height: auto;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.3rem 0 0.3rem 3rem;
+    margin: 1rem;
+    border: 1px solid transparent;
+    line-height: 1.4;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: left;
+    z-index: 9999;
+    @include trans-hover;
+    &:hover {
+      text-decoration: none;
+      color: $color-hover;
+    }
+    &:focus {
+      outline: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 2.2px;
+      background-color: $color-hover;
+      transform: scale(0);
+      @include trans-hover;
+    }
+  }
+  &__btn-label:hover {
+    &::before {
+      transform: scale(1);
+    }
+  }
+  &__label-link {
+    color: $black-light !important;
+    &:hover {
+      color: $color-gray;
+    }
+  }
+}
+.nav.nav-before {
+  @include respond(tab-land) {
+    &::before {
+      width: 100vw;
+      opacity: 1;
+    }
+  }
+}
+.visible-white {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  visibility: visible;
+}
+.nav-visible {
+  pointer-events: auto;
+  width: 100%;
+  @include respond(tab-land) {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+// toggle navbar
+#toggle-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 99999;
+
+  @include respond(tab-land) {
+    top: 0%;
+    left: 0;
+    transform: none;
+    z-index: 1;
+    height: 75px;
+    display: flex;
+    align-items: center;
+  }
+  @include respond(tab-port) {
+    top: 0%;
+    left: 0;
+    transform: none;
+    z-index: 1;
+    height: 75px;
+    display: flex;
+    align-items: center;
+  }
+}
+.nav__list.display-nav {
+  transform: translateX(0%);
+  transition: all 0.5s ease-in 0.5s;
+  z-index: 9999;
+  @include respond(tab-land) {
+    pointer-events: auto;
+  }
+}
+.nav__list.close-nav {
+  display: block;
+  position: relative;
+  transform: translateX(-100%) !important;
+  transition: all 0.4s ease-in 0.2s;
+}
+.off {
+  display: block;
+  position: relative;
+  transform: translateX(-100%) !important;
+  transition: all 0.2s ease-in 0.2s;
+
+  @include respond(tab-land) {
+    display: block;
+    position: relative;
+    transform: translateX(0%) !important;
+  }
+  @include respond(tab-port) {
+    display: block;
+    position: relative;
+    transform: translateX(0%) !important;
+  }
+}
+.toggle-bar {
+  &__button {
+    padding: 10rem 1.5rem;
+    background-color: $black;
+    cursor: pointer;
+    line-height: 0;
+    transform: translateX(0%);
+    transition: all 0.2s ease-in 0.4s;
+
+    @include respond(tab-land) {
+      padding: 2.5rem 3rem;
+      background-color: transparent;
+    }
+    @include respond(tab-port) {
+      padding: 2.5rem 3rem;
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    height: 0.3rem;
+    width: 2.2rem;
+    background-color: $white;
+    display: inline-block;
+    transition: all 0.1s ease-in;
+    line-height: 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      background-color: $white;
+      transition: all 0.1s ease-in;
+      line-height: 0;
+    }
+    &::before {
+      top: -8px;
+      left: 0;
+    }
+    &::after {
+      top: 8px;
+      left: 0;
+    }
+  }
+  &__button:hover &__icon {
+    &::before {
+      top: -11px;
+    }
+    &::after {
+      top: 11px;
+    }
+  }
+}
+
+.dropmenu {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+  @include respond(tab-land) {
+    transition: all 5s ease;
+    position: relative;
+    left: 0 !important;
+    top: 0;
+    transform: translateY(0);
+    height: 0;
+  }
+  @include respond(tab-port) {
+    transition: all 5s ease;
+    position: relative;
+    left: 0 !important;
+    top: 0;
+    transform: translateY(0);
+    height: 0;
+  }
+  li {
+    a {
+      font-size: 1.5rem;
+      color: $black-light;
+      @include respond(tab-land) {
+        color: $white !important;
+      }
+      @include respond(tab-port) {
+        color: $white !important;
+      }
+    }
+  }
+  &__label-name {
+    @include style-font-bl;
+    color: $black-light !important;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    z-index: -1 !important;
+
+    @include respond(tab-land) {
+      color: $white !important;
+    }
+    @include respond(tab-port) {
+      color: $white !important;
+    }
+    &:hover {
+      color: $color-gray !important;
+    }
+  }
+}

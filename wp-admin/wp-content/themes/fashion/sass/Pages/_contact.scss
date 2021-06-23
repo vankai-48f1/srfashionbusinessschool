@@ -1,0 +1,135 @@
+.contact {
+  &__link-login-fb {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0)
+      linear-gradient(to bottom, $blue-linear-1 15%, $blue-linear-2 100%) repeat
+      scroll 0 0;
+    color: $white;
+    text-decoration: none;
+    height: 44px;
+    padding: 5px 5px 5px 10px;
+    border: 2px solid $white;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    margin-bottom: 3rem;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__box-login-fb {
+    display: flex;
+    height: 100%;
+  }
+  &__text-icon-lg,
+  &__icon-fb-lg {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__text-icon-lg {
+    font-size: 1.3rem;
+  }
+  &__icon-fb-lg {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding: 7px 10px;
+    background-color: $blue;
+    border-radius: 2px;
+  }
+  &__form-contact {
+    padding: 3rem 0 8rem 0;
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .column-half {
+        width: calc((100% / 2) - 20px);
+        margin-bottom: 3rem;
+        position: relative;
+        @include respond(phone) {
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+        label {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          transition: all 0.333s ease-in-out;
+          -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $black-light;
+          padding: 0 15px;
+          margin-bottom: 7px;
+          z-index: 100;
+        }
+        input {
+          width: 100%;
+          height: 50px;
+          padding: 1.5rem;
+          font-size: 14px;
+          border: 1px solid $bd-input;
+          transition: all 0.3s ease;
+          &:focus {
+            outline: none;
+            border: 1px solid $black-light;
+          }
+        }
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 2rem 1.5rem;
+          font-size: 14px;
+          border: 1px solid $bd-input;
+          transition: all 0.3s ease;
+          &:focus {
+            outline: none;
+            border: 1px solid $black-light;
+          }
+        }
+        .wpcf7-not-valid-tip {
+          margin-top: 1rem;
+        }
+        &.is-focused label {
+          transform: translate(6px, -13px) scale(0.7);
+        }
+        &.is-focused input {
+          transition: all 0.333s ease-in-out;
+          padding-bottom: 5px;
+        }
+        &.is-focused textarea {
+          transition: all 0.333s ease-in-out;
+          padding-bottom: 5px;
+        }
+      }
+      .column-half-full {
+        width: 100% !important;
+      }
+    }
+    .form-submit {
+      display: block;
+      text-align: center;
+      input {
+        padding: 1rem 8rem;
+        background-color: $black-light;
+        color: $white;
+        border: 1px solid transparent;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: $color-gray;
+          color: $black-light;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

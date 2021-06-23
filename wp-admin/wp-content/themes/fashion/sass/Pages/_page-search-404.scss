@@ -1,0 +1,122 @@
+.page-404 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &::after {
+    content: "404";
+    font-size: 30rem;
+    color: $black-light;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .content-404 {
+    padding-top: 5rem;
+
+    h1 {
+      font-size: 5rem;
+      text-transform: capitalize;
+      color: $black-light;
+      padding: 3rem 0 5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      color: $red;
+      margin-bottom: 2rem;
+    }
+    .pss-center-404 {
+      .input-group {
+        flex-direction: row;
+        width: 100%;
+        input {
+          height: 4rem;
+          font-size: 2rem;
+          padding-left: 2rem;
+          width: 70%;
+          display: block;
+          border-radius: 3px;
+          &:focus {
+            border: 1px solid $black-light;
+            outline: none;
+            box-shadow: none;
+          }
+        }
+        span {
+          display: block;
+          text-align: center;
+          width: 20%;
+          margin-left: 2rem;
+          button {
+            font-size: 1.3rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3rem;
+            background-color: $black-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-search {
+  padding-top: 3rem;
+  .title-search {
+    font-size: 3rem;
+    color: $black-light;
+    margin-bottom: 3rem !important;
+    span {
+      color: $red;
+    }
+  }
+  .list-item-search {
+    .post-by-search {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      img {
+        height: 34rem;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .card-body {
+      h2 {
+        font-size: 1.5rem !important;
+      }
+    }
+    .see-more-link {
+      padding: 1.25rem;
+      margin-top: auto;
+      a {
+        font-size: 1.2rem;
+        color: $white;
+        background-color: $black-light;
+        border: none;
+        &:hover {
+          color: $color-gray;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.pagination.justify-content-center {
+  li {
+    .current {
+      font-size: 1.5rem;
+    }
+    a {
+      font-size: 1.3rem;
+      color: $black-light;
+      padding: 0 7px;
+    }
+  }
+}

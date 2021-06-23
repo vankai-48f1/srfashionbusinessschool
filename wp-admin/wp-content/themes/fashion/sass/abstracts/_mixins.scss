@@ -1,0 +1,49 @@
+//chứa các mixin , responsive mobile
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == small-phone {
+    @media (max-width: 360px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+@mixin style-font-w {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+}
+@mixin style-font-bl {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $black-light;
+}
+@mixin trans-hover {
+  transition: all 0.4s ease;
+}
