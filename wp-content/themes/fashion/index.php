@@ -303,7 +303,7 @@ Template Name: Trang chủ
                     </div>
                     <div class="news-event__div-news-event elmt-anm wow animate__animated animate__fadeInUp animate__delay-0s" id="slider-stories">
                         <!-- slick 4 -->
-                        <script src="<?php echo get_template_directory_uri() ?>/js/js-home/slider-fourth.js"></script>
+
                         <?php
                         $cate_stories = array(
                             'post_status' => 'publish',

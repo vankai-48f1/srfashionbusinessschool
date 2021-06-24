@@ -98,12 +98,17 @@
   </div>
 </footer>
 
-
+ <!-- jQuery library -->
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <!-- Popper JS -->
 <script src="<?php echo get_template_directory_uri() ?>/js/popper.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
+<!-- Slick -->
+<script src="<?php echo get_template_directory_uri() ?>/slick/slick.js"></script>
+
 <!-- dropdown menu -->
 <script src="<?php echo get_template_directory_uri() ?>/js/js-home/toggle-panel.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/js-home/menu-dropdown.js"></script>
@@ -112,6 +117,7 @@
 <!-- scroll nav -->
 <?php if (is_front_page()) { ?>
   <script>
+  (function($) {
     $(document).ready(function() {
       $(window).scroll(function() {
         if ($(window).width() > 1200) {
@@ -128,6 +134,7 @@
         }
       });
     });
+  })(jQuery)
   </script>
 <?php } ?>
 

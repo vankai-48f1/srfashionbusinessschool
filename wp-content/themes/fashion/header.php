@@ -25,7 +25,7 @@
   <?php endif ?>
 	<?php
       if (is_front_page()) { ?>
-	<meta property="og:image" content="/wp-content/uploads/2020/10/SR-Banner-new-min.jpg" />
+	
 	<?php } ?> 
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/bootstrap.min.css">
@@ -36,11 +36,6 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/animate.css/animate.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/font-srfashion.css">
   <!--<link crossorigin="anonymous" rel='stylesheet' id='wi-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7COswald%3A300%2Cregular%2C700&#038;subset=cyrillic%2Ccyrillic-ext%2Clatin%2Clatin-ext&#038;ver=7227ff9b29d56eb13ecd1e9b2935bc17' type='text/css' media='all' />-->
-
-  <!-- jQuery library -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="<?php echo get_template_directory_uri() ?>/js/jquery.min.js"></script>
-  <script src="<?php echo get_template_directory_uri() ?>/slick/slick.js"></script>
 
   <?php if (!is_front_page()) {
   ?>
@@ -61,6 +56,7 @@
     </style>
 
   <?php } ?>
+  <?php wp_deregister_script('jquery'); ?>
   <?php wp_head() ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183663019-1"></script>
